@@ -1,12 +1,18 @@
-﻿cmake_minimum_required(VERSION 3.12)
-project(CmakePriject1)
+﻿cmake_minimum_required(VERSION 3.15)
+project(SpaceInvaders LANGUAGES CXX) # specify using cpp for cmake
 
-# First program: Prints "Hello World"
-add_executable(hello_world hello_world.cpp)
+set(CMAKE_CXX_STANDARD 17) # enables cpp 17 features
 
-# Second program: Prints "Hello CMake"
-add_executable(hello_cmake hello_cmake.cpp)
+add_definitions(-D_CRT_SECURE_NO_WARNINGS) # diables unsafe functions for simplicity
 
-# Optional: Set C++ standard for both
-set_property(TARGET hello_world PROPERTY CXX_STANDARD 20)
-set_property(TARGET hello_cmake PROPERTY CXX_STANDARD 20)
+add_executable(SpaceInvaders main.cpp "Player.cpp" "Bullet.cpp") # add files to compile
+
+if(WIN32)
+	target_link_libraries(SpaceInvaders PRIVATE User32)
+endif() # windows api function for console manipulation requires this library
+
+
+
+
+
+
