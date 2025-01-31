@@ -7,7 +7,7 @@ Player::Player() {
 }
 
 void Player::moveLeft() {
-	if (x > 0) // decrease x (move left) id not at the left edge
+	if (x > 0) // decrease x (move left) if not at the left edge
 		x--;
 }
 
