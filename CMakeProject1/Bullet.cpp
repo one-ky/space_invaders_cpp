@@ -9,10 +9,10 @@ Bullet::Bullet() {
 void Bullet::update() {
 	if (isActive) { // if the bullet is active, so is active is true
 		y--; // move up
-	}
 
-	// deactivate bullet if it goes off screen
-	if (y < 0) {
-		isActive = false;
+		// deactivate bullet if it goes off screen
+		if (y < 0) {
+			isActive = false;
+		}
 	}
 }
