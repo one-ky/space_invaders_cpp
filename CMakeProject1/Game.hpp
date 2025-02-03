@@ -3,6 +3,7 @@
 #include "Bullet.hpp"
 #include "Enemy.hpp"
 #include "Constants.hpp"
+#include <Windows.h>
 
 class Game {
 public:

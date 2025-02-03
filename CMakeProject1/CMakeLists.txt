@@ -9,7 +9,9 @@ add_executable(
 SpaceInvaders main.cpp 
 "Player.cpp" 
 "Bullet.cpp"
-) # add files to compile
+"Enemy.cpp"
+"Enemy.hpp"
+ "Game.cpp") # add files to compile
 
 
 if(WIN32)
